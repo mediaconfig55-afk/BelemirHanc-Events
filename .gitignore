@@ -1,0 +1,14 @@
+# Yerel Claude Code ayarları (kişiye özel, depoya girmemeli)
+.claude/settings.local.json
+
+# İşletim sistemi / editör artıkları
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Geçici dosyalar
+*.log
+*.tmp

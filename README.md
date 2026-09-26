@@ -34,22 +34,30 @@ JPEG kalite 80 ile sıkıştırıldı (17 MB → ~3,4 MB):
 | `hizmet-teklif.jpg`, `hizmet-kina.jpg`, `hizmet-nikah.jpg` | hizmet kartları | ilgili organizasyon kareleri |
 | `galeri-1.jpg` … `galeri-6.jpg` | galeri | teklif ve kına kurulumları |
 | `og-kapak.jpg` | sosyal paylaşım kapağı | `teklif.jpg`'den 1200×630 merkez kırpma |
-| `assets/img/art/*.svg` | fotoğrafsız kartlar | el çizimi çizgi-sanat motifleri |
+| `hizmet-nisan.jpg` | Nişan & Söz kartı | nişan takı ve neon yazı |
+| `assets/img/art/*.svg` | fotoğraf eklenmemiş kartlar için yedek | el çizimi çizgi-sanat motifleri |
 | `apple-touch-icon.png` | iOS ikonu — **henüz eklenmedi** | 180×180 |
 
-Sonradan `hizmet-nisan.jpg` (nişan takı, "Better Together" neon) ve `hizmet-dogumgunu.jpg`
-(mavi balon takı, bebek kutlaması) eklendi; bunlar için hesabın ~550 gönderisi tarandı.
+Sonradan `hizmet-nisan.jpg` (nişan takı, "Better Together" neon) eklendi; bunun için
+hesabın ~550 gönderisi tarandı.
 
-**Sünnet ve Gelin Hazırlığı** kartlarında hâlâ motif var. Sebebi: akışta bu iki kategoride
-tek kare yok, işler yalnızca öne çıkan hikâyelerde duruyor — `BrideToBe👰‍♀️` hikâyesinin
-9 karesinin tamamı video, `Sünnet🧿` hikâyesinden ise konuyla ilgisiz kareler geldi.
-İşletmeden birer fotoğraf isteyip şu adlarla `assets/img/` içine koyun:
+### Hizmet kartları
 
-`hizmet-sunnet.jpg`, `hizmet-gelin.jpg`
+Sitede **4 kart** var ve dördünün de gerçek fotoğrafı mevcut: Evlilik Teklifi,
+Kına Gecesi, Nikah & Düğün, Nişan & Söz.
 
-Ardından `index.html` içinde ilgili kartın `<div class="card__body">` satırının hemen
-üstüne, mevcut fotoğraflı kartlardakiyle aynı biçimde bir `<img>` satırı ekleyin —
-motif ve yer tutucu etiket kendiliğinden kaybolur.
+Gelin Hazırlığı, Sünnet ve Doğum Günü & Bebek Kutlamaları kartları kaldırıldı. Akışta bu
+kategorilerde kare yok (işler yalnızca öne çıkan hikâyelerde duruyor; `BrideToBe👰‍♀️`
+hikâyesinin 9 karesinin tamamı video). Bu hizmetler kart ızgarasının altındaki tek satırlık
+notta (`.bento__not`) ve `FAQPage` / `hasOfferCatalog` yapısal verisinde korunuyor —
+böylece "samsun doğum günü organizasyonu" gibi yerel aramalardaki görünürlük kaybolmuyor.
+
+`assets/img/hizmet-dogumgunu.jpg` (mavi balon takı, "BABY" harfleri — hastane odası bebek
+kutlaması) klasörde duruyor ama hiçbir yerde kullanılmıyor; kart geri eklenirse hazır.
+
+İşletme bu organizasyonlara ait fotoğraf gönderirse kartlar geri eklenebilir: mevcut bir
+`<article class="frame card card--wide">` bloğunu kopyalayıp başlık, metin ve `<img>`
+satırını değiştirmeniz yeterli (kart sayısı 4'ün katı olduğunda ızgara tam oturur).
 
 Yeni fotoğrafları eklerken **300 KB altına** sıkıştırın (https://squoosh.app) —
 yükleme hızı Google sıralamasını doğrudan etkiliyor.
